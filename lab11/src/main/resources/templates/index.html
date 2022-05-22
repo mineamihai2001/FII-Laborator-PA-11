@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org" xmlns:form="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="row">
+    <h1 class="ms-5">Social Network</h1>
+    <p class="text-primary ms-5">Insert a new person in the Social Network along with their friends:</p>
+    <div class="col-6">
+        <form id="form" class="ms-5">
+            <label for="name">Name</label>
+            <input class="ms-2" id="name" type="text">
+            <br>
+            <label for="friends">Friends</label>
+            <input id="friends" type="text" placeholder="Comma-separated values">
+            <button class="btn btn-primary d-inline" type="submit" onclick="event.preventDefault()">Submit</button>
+            <div class="fs-2 d-inline ms-5" id="status"></div>
+        </form>
+        <p class="text-primary ms-5 mt-5">Current status of the Social Network:</p>
+        <div id="table" class="container">
+
+        </div>
+    </div>
+
+    <div class="col-6">
+        <p class="text-primary ms-5">Get the most k-popular people from the Social Network:</p>
+        <form id="popular-form" class="ms-5">
+            <input class="ms-2" id="get-popular" type="text" placeholder="Enter k">
+            <button class="btn btn-success" onclick="event.preventDefault()">Get</button>
+            <br>
+        </form>
+        <div id="list" class="container ms-4 mt-5">
+
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="../static/index.js"></script>
+</body>
+</html>
