@@ -159,7 +159,6 @@ public class Lab11Application {
             this.db.update(sql);
         }
 
-        System.out.println("out here");
         Map<String, String> result = new HashMap<>();
         result.put("status", "success");
         result.put("body", "update done");
